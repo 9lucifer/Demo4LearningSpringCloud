@@ -1,7 +1,8 @@
 package com.atguigu.cloud.controller;
-import com.atguigu.cloud.entity.PayDTO;
+
 import com.atguigu.cloud.Service.PayService;
 import com.atguigu.cloud.entities.Pay;
+import com.atguigu.cloud.entity.PayDTO;
 import com.atguigu.cloud.resp.ResultData;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -64,7 +65,7 @@ public class PayController {
         return ResultData.success(payService.getAll());
     }
 
-    @org.springframework.beans.factory.annotation.Value("${server.port}")
+    @Value("${server.port}")
     private String port;
 
     @GetMapping("/pay/get/info")
